@@ -1,4 +1,6 @@
 class Admin::ProductsController < ApplicationController
+  before_action :authenticate_user!
+  before_action :require_is_admin, only:[:edit, :new, :update, :destroy, :create]
 
 def index
   @products = Product.all
@@ -10,7 +12,7 @@ end
 
 def create
   @product = Product.new(product_params)
-  
+
   if @product.save
     redirect_to admin_products_path
   else
