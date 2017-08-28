@@ -7,8 +7,7 @@ def destroy
   @cart_item.destroy
 
   flash[:warning] = "成功将#{@product.title}从购物车中删除！"
-  redirect_to :back
-end
-end
 
+  redirect_to :back
+end 
 end
