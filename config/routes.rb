@@ -16,11 +16,11 @@ end
 resources :carts do
   collection do
     delete :clean
-    post :checkout 
+    post :checkout
   end
 end
 
-
+resources :orders
 
 resources :cart_items
 
