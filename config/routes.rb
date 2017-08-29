@@ -20,6 +20,10 @@ resources :carts do
   end
 end
 
+namespace :account do
+  resources :orders
+end 
+
 resources :orders
 
 resources :cart_items
